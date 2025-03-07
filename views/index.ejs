@@ -9,19 +9,34 @@
     <%- include("partials/header") %>  <!-- Include Header -->
     <div class="text-left">
     <h1>Blog Posts</h1>
-    <ul>
+    <ul class="posts-list">
         <% posts.forEach(post => { %>
-            <li>
-                <h2><%= post.title %></h2>
-                <p><%= post.content %></p>
-                <a class="btn-edit" href="/edit/<%= post.id %>">Edit</a>
-                <form action="/delete/<%= post.id %>" method="POST" onsubmit="return confirmDelete()">
-                    <button type="submit" class="btn-delete ">Delete</button>
-                </form>
+            <li class="post-block">
+                <div class="post-title">
+                    <h2><%= post.title %></h2>
+                </div>
+    
+                <div class="post-content">
+                    <p><%= post.content.length > 100 ? post.content.substring(0, 100) + "..." : post.content %></p>
+                </div>
+    
+                <% if (post.content.length > 100) { %>  
+                    <div class="read-more-container">
+                        <a href="/post/<%= post.id %>" class="read-more">Read More</a>
+                    </div>
+                <% } %>
+    
+                <div class="post-actions">
+                    <a class="btn-edit button-container" href="/edit/<%= post.id %>">Edit</a>
+                    <form action="/delete/<%= post.id %>" method="POST" onsubmit="return confirmDelete()">
+                        <button type="submit" class="btn-delete button-container">Delete</button>
+                    </form>
+                </div>
                 
             </li>
         <% }); %>
     </ul>
+    
     </div>
     <script src="/script.js"></script>
 

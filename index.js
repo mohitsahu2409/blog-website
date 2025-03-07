@@ -3,7 +3,6 @@ import express from 'express';
 const app = express();
 const port = 3000;
 
-var titles = [];
 var posts = [];
 
 // Middleware to handle form data
@@ -52,6 +51,16 @@ app.post('/edit/:id', (req, res) => {
 
     res.redirect('/');
 });
+
+app.get('/post/:id', (req, res) => {
+    const postID = Number(req.params.id);
+    const post = posts.find(p => p.id === postID);
+
+    if (!post) return res.status(404).send("Post not found");
+
+    res.render('post', { post });
+});
+
 
 
 app.post('/delete/:id', (req, res) =>{

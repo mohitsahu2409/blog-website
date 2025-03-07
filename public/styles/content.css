@@ -87,28 +87,42 @@ textarea {
   background: #3586ff;
 }
 
-/* Buttons */
-.btn-edit, .btn-delete {
-  display: inline-block;  /* Ensures buttons stay inline */
-  width: auto;  /* Prevents full width */
-  padding: 5px 10px;  /* Adjusts button size */
-  font-size: 14px;  /* Makes text readable */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
+.button-container {
+    display: flex;
+    gap: 10px; /* Adjusts spacing between buttons */
+    align-items: center; /* Ensures both buttons align in the center */
+}
+
+.btn-edit,
+.btn-delete {
+    display: inline-flex; /* Ensures both behave the same way */
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 80px; 
+    height: 40px;
+    line-height: normal; /* Fix vertical misalignment */
 }
 
 .btn-edit {
-  background-color: #4CAF50; /* Green */
-  color: white;
+    background-color: green;
+    color: white;
+    margin-top: 45px;
+    text-align: center;
 }
 
 .btn-delete {
-  background-color: #f44336; /* Red */
-  color: white;
-  margin-left: 10px; /* Adds space between buttons */
+    background-color: red;
+    color: white;
+    text-align: center;
 }
+
+
 
 /* Ensure the form doesn't take full width */
 form {
@@ -124,6 +138,7 @@ form {
 
 .btn-edit:hover {
   background-color: darkblue;
+  color: white;
 }
 
 
@@ -136,3 +151,49 @@ form {
   color: lightgray; /* Slight change on hover */
 }
 
+.title-edit {
+  color:#3586ff;
+}
+
+.posts-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-block {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.read-more-container {
+  margin-bottom: 10px;
+}
+
+.read-more {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
