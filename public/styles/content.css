@@ -1,0 +1,138 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+header,
+footer {
+  flex: 0 0 auto;
+}
+
+main {
+  text-align: left;  /* Changed from center to left */
+  padding: 5vmin;
+  flex: 1 0 auto;
+}
+
+h1 {
+  text-align: left; /* Aligned to the left */
+  color: #3586ff;
+}
+
+
+p {
+  color: grey;
+  text-align: left; /* Aligned to the left */
+}
+
+.profile {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+form {
+  margin-top: 50px;
+}
+
+.feedback-input {
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #3586ff;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #3586ff;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: #3586ff;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+[type="submit"]:hover {
+  background: #3586ff;
+}
+
+/* Buttons */
+.btn-edit, .btn-delete {
+  display: inline-block;  /* Ensures buttons stay inline */
+  width: auto;  /* Prevents full width */
+  padding: 5px 10px;  /* Adjusts button size */
+  font-size: 14px;  /* Makes text readable */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-edit {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.btn-delete {
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-left: 10px; /* Adds space between buttons */
+}
+
+/* Ensure the form doesn't take full width */
+form {
+  display: inline;
+}
+
+
+
+.btn-delete:hover, .btn-edit:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+
+.btn-edit:hover {
+  background-color: darkblue;
+}
+
+
+
+.nav-link {
+  color: white !important;  /* Makes sure the color is applied */
+}
+
+.nav-link:hover {
+  color: lightgray; /* Slight change on hover */
+}
+

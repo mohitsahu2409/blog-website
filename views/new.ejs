@@ -1,0 +1,9 @@
+<%- include("partials/header")  %>
+
+<h1>Create Post</h1>
+
+<form action="/new" method="POST">  <!-- Add action and method -->
+    <input name="title" type="text" class="feedback-input" placeholder="Title" required />
+    <textarea name="content" class="feedback-input" placeholder="Content" required></textarea>
+    <input type="submit" value="Create Post" />
+</form>
