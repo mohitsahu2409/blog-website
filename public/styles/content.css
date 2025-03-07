@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  background-color: #B2D3A8;
+  background-color: #F7FAF5;
 }
 
 body {
@@ -49,7 +49,7 @@ form {
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
-  background-color: transparent;
+  background-color: white ;
   border: 2px solid #5D3A6D;
   transition: all 0.3s;
   padding: 13px;
@@ -75,7 +75,7 @@ textarea {
   border-radius: 5px;
   border: 0;
   cursor: pointer;
-  color: #B2D3A8;
+  color: #F7FAF5;
   font-size: 24px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -111,15 +111,15 @@ textarea {
 }
 
 .btn-edit {
-    background-color: green;
-    color: #B2D3A8;
+    background-color: #218838;
+    color: #F7FAF5;
     margin-top: 45px;
     text-align: center;
 }
 
 .btn-delete {
-    background-color: red;
-    color: #B2D3A8;
+    background-color: #C82333;
+    color: #F7FAF5;
     text-align: center;
 }
 
@@ -145,7 +145,7 @@ form {
 
 
 .nav-link {
-  color: #B2D3A8 !important;  /* Makes sure the color is applied */
+  color: #F7FAF5  !important;  /* Makes sure the color is applied */
 }
 
 .nav-link:hover {
@@ -202,7 +202,7 @@ form {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #f1f1f1;
-  color: #333;
+  background-color: #5D3A6D;
+  color: #F7FAF5;
   margin-top: 20px;
 }
