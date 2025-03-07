@@ -13,10 +13,10 @@ i {
 /*----------bootstrap-navbar-css------------*/
 .navbar-logo {
   padding: 15px;
-  color: #fff;
+  color: #B2D3A8;
 }
 .navbar-mainbg {
-  background-color: #3586ff;
+  background-color: #5D3A6D;
   padding: 0px;
 }
 #navbarSupportedContent {
@@ -45,7 +45,7 @@ i {
   position: relative;
 }
 #navbarSupportedContent > ul > li.active > a {
-  color: #3586ff;
+  color: #5D3A6D;
   background-color: transparent;
   transition: all 0.7s;
 }
@@ -73,7 +73,7 @@ i {
   left: 0px;
   transition-duration: 0.6s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  background-color: #fff;
+  background-color: #B2D3A8;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   margin-top: 10px;
@@ -83,7 +83,7 @@ i {
   position: absolute;
   width: 25px;
   height: 25px;
-  background-color: #fff;
+  background-color: #B2D3A8;
   bottom: 10px;
 }
 .hori-selector .right {
@@ -99,7 +99,7 @@ i {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #3586ff;
+  background-color: #5D3A6D;
 }
 .hori-selector .right:before {
   bottom: 0;
@@ -167,14 +167,14 @@ i {
 footer {
   position: relative;
   width: 100%;
-  background: #3586ff;
+  background: #5D3A6D;
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #B2D3A8;
 }
 
 footer .social_icon,
@@ -192,7 +192,7 @@ footer .menu li {
 }
 footer .social_icon li a {
   font-size: 2em;
-  color: #ccc;
+  color: #B2D3A8;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
@@ -204,7 +204,7 @@ footer .social_icon li a:hover {
 
 footer .menu li a {
   font-size: 1.2em;
-  color: #ccc;
+  color: #B2D3A8;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
@@ -213,7 +213,7 @@ footer .menu li a {
 }
 footer .menu li a:hover {
   opacity: 1;
-  color: #fff;
+  color: #B2D3A8;
 }
 p {
   color: whtie;
@@ -224,11 +224,11 @@ p {
 }
 
 .copy_background {
-  background-color: #3586ff;
+  background-color: #5D3A6D;
 }
 
 .copyright {
-  color: white;
+  color: #B2D3A8;
 }
 
 /*wave and animation*/
