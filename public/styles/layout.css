@@ -50,7 +50,7 @@ i {
   transition: all 0.7s;
 }
 #navbarSupportedContent a:not(:only-child):after {
-  content: "\f105";
+  /* content: "\f105"; */
   position: absolute;
   right: 20px;
   top: 10px;
@@ -315,4 +315,8 @@ main {
 #wave1, #wave2, #wave3, #wave4 {
   transform: scaleY(0.7); /* Adjust this value to shrink waves */
   transform-origin: bottom; /* Keeps the base aligned */
+}
+
+.nav-col:hover {
+  color: #F7FAF5;
 }
