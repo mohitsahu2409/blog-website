@@ -1,0 +1,292 @@
+/* ========================================================================
+   Global Theme
+========================================================================= */
+
+:root {
+  --bg-body: #f4f6fb;
+  --bg-card: #ffffff;
+  --bg-navbar: #1f1f1f;
+  --border-soft: #e1e5f0;
+  --text-main: #1f2933;
+  --text-muted: #6b7280;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --accent: #10b981;
+  --shadow-soft: 0 6px 18px rgba(15, 23, 42, 0.06);
+  --radius-card: 12px;
+  --radius-pill: 999px;
+  --transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg-body);
+  color: var(--text-main);
+}
+
+/* Root container */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* General Layout */
+.container {
+  max-width: 960px;
+}
+
+/* ========================================================================
+   Navbar
+========================================================================= */
+
+.navbar {
+  background: var(--bg-navbar) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nav-link {
+  color: #dcdcdc !important;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+  transform: translateY(-1px);
+}
+
+.navbar-text {
+  color: #cccccc;
+}
+
+.btn-outline-light {
+  border-radius: var(--radius-pill);
+}
+
+/* ========================================================================
+   Headings
+========================================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* ========================================================================
+   Buttons
+========================================================================= */
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-danger {
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
+.btn-danger:hover {
+  background: var(--danger-hover);
+  border-color: var(--danger-hover);
+}
+
+.btn-success {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-sm {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+
+/* ========================================================================
+   Cards (Home Page)
+========================================================================= */
+
+.card {
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-soft);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-3px);
+}
+
+.card-title {
+  font-size: 1.1rem;
+}
+
+.card-text {
+  color: var(--text-muted);
+}
+
+/* Footer inside card */
+.card-footer {
+  background: #fafbff;
+  font-size: 0.85rem;
+}
+
+/* ========================================================================
+   Forms (Login, Signup, Create/Edit Post)
+========================================================================= */
+
+form {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-soft);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #dadde5;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.18);
+}
+
+/* Textareas */
+textarea.form-control {
+  min-height: 180px;
+}
+
+/* Centered auth pages */
+.auth-wrapper {
+  max-width: 420px;
+  margin: 40px auto;
+}
+
+/* ========================================================================
+   Single Post Page
+========================================================================= */
+
+.post-view {
+  background: var(--bg-card);
+  padding: 28px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.post-view-title {
+  margin-bottom: 0.6rem;
+}
+
+.post-view-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ========================================================================
+   Comments Section
+========================================================================= */
+
+.comments-section {
+  margin-top: 30px;
+}
+
+.list-group-item {
+  background: #ffffff;
+  border-radius: 8px !important;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-soft);
+  transition: var(--transition);
+}
+
+.list-group-item:hover {
+  background: #f9faff;
+  border-color: #cdd3e0;
+}
+
+.comment-author {
+  font-weight: 600;
+}
+
+.comment-text {
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* Comment form */
+textarea.form-control {
+  resize: vertical;
+}
+
+.comment-actions button {
+  margin-right: 6px;
+}
+
+/* ========================================================================
+   Utility
+========================================================================= */
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Gap utility fix */
+.gap-2 {
+  gap: 8px;
+}
+
+/* Centered auth pages */
+.auth-wrapper {
+  max-width: 420px; /* controls width */
+  margin: 40px auto; /* centers horizontally */
+  padding: 24px;
+}
+
+.auth-wrapper form .form-control {
+  width: 100%; /* makes input fit the wrapper */
+}
+
+/* ========================================================================
+   Responsive
+========================================================================= */
+
+@media (max-width: 768px) {
+  .card-body {
+    padding: 16px;
+  }
+  form {
+    padding: 18px;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
