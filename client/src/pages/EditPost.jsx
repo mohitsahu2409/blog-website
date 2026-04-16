@@ -12,7 +12,9 @@ function EditPost() {
   useEffect(() => {
     async function fetchPost() {
       try {
-        const res = await fetch(`http://localhost:5000/api/posts/${id}`);
+        const res = await fetch(
+          `https://blog-website-ai.onrender.com/api/posts/${id}`,
+        );
         const data = await res.json();
         setForm({ title: data.title, content: data.content });
       } catch (err) {
@@ -30,14 +32,17 @@ function EditPost() {
     e.preventDefault();
     const token = localStorage.getItem("token");
 
-    const res = await fetch(`http://localhost:5000/api/posts/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
+    const res = await fetch(
+      `https://blog-website-ai.onrender.com/api/posts/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(form),
       },
-      body: JSON.stringify(form),
-    });
+    );
 
     if (res.ok) {
       alert("Post updated successfully!");

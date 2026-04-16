@@ -16,7 +16,7 @@ function CommentForm({ postId, onNewComment }) {
     try {
       const token = localStorage.getItem("token");
       const res = await fetch(
-        `http://localhost:5000/api/posts/${postId}/comments`,
+        `https://blog-website-ai.onrender.com/api/posts/${postId}/comments`,
         {
           method: "POST",
           headers: {
@@ -24,7 +24,7 @@ function CommentForm({ postId, onNewComment }) {
             Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({ content }),
-        }
+        },
       );
 
       if (!res.ok) {

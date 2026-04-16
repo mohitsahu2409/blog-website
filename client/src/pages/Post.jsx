@@ -19,7 +19,9 @@ function Post() {
   useEffect(() => {
     async function fetchPost() {
       try {
-        const res = await fetch(`http://localhost:5000/api/posts/${id}`);
+        const res = await fetch(
+          `https://blog-website-ai.onrender.com/api/posts/${id}`,
+        );
         if (!res.ok) throw new Error("Failed to fetch post");
 
         const data = await res.json();
@@ -41,13 +43,16 @@ function Post() {
     try {
       setLoadingSummary(true);
 
-      const res = await fetch("http://localhost:5000/api/summarize", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "https://blog-website-ai.onrender.com/api/summarize",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ content: post.content }), // ✅ FIXED
         },
-        body: JSON.stringify({ content: post.content }), // ✅ FIXED
-      });
+      );
 
       const data = await res.json();
       setSummary(data.summary);
@@ -75,12 +80,15 @@ function Post() {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`http://localhost:5000/api/posts/${id}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const res = await fetch(
+        `https://blog-website-ai.onrender.com/api/posts/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       if (res.ok) {
         alert("Post deleted successfully!");

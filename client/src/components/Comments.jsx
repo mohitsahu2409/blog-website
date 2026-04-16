@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import CommentForm from "./CommentForm";
 
-
 function Comments({ postId }) {
   const { user } = useAuth();
   const [comments, setComments] = useState([]);
@@ -11,7 +10,9 @@ function Comments({ postId }) {
 
   async function fetchComments() {
     try {
-      const res = await fetch(`http://localhost:5000/api/posts/${postId}/comments`);
+      const res = await fetch(
+        `https://blog-website-ai.onrender.com/api/posts/${postId}/comments`,
+      );
       if (!res.ok) throw new Error("Failed to fetch comments");
       const data = await res.json();
       setComments(data);
@@ -31,10 +32,13 @@ function Comments({ postId }) {
     if (!window.confirm("Delete comment?")) return;
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/posts/${postId}/comments/${commentId}`, {
-        method: "DELETE",
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await fetch(
+        `https://blog-website-ai.onrender.com/api/posts/${postId}/comments/${commentId}`,
+        {
+          method: "DELETE",
+          headers: { Authorization: `Bearer ${token}` },
+        },
+      );
       if (!res.ok) {
         const err = await res.json();
         alert(err.message || "Failed to delete");
@@ -49,7 +53,10 @@ function Comments({ postId }) {
   return (
     <div className="mt-4">
       <h5>Comments ({comments.length})</h5>
-      <CommentForm postId={postId} onNewComment={(c) => setComments((prev) => [...prev, c])} />
+      <CommentForm
+        postId={postId}
+        onNewComment={(c) => setComments((prev) => [...prev, c])}
+      />
       {loading ? (
         <div>Loading comments...</div>
       ) : comments.length === 0 ? (
@@ -59,12 +66,17 @@ function Comments({ postId }) {
           {comments.map((c) => (
             <li key={c.id} className="list-group-item">
               <strong>{c.author || "User"}</strong>{" "}
-              <small className="text-muted">{new Date(c.created_at).toLocaleString()}</small>
+              <small className="text-muted">
+                {new Date(c.created_at).toLocaleString()}
+              </small>
               <div className="mt-2">{c.content}</div>
               {user && user.id === c.user_id && (
                 <div className="mt-2">
                   {/* Add edit UI if you want; delete button provided */}
-                  <button className="btn btn-sm btn-danger" onClick={() => handleDelete(c.id)}>
+                  <button
+                    className="btn btn-sm btn-danger"
+                    onClick={() => handleDelete(c.id)}
+                  >
                     Delete
                   </button>
                 </div>

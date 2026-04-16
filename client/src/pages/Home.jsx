@@ -11,7 +11,9 @@ function Home() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const res = await fetch("http://localhost:5000/api/posts");
+        const res = await fetch(
+          "https://blog-website-ai.onrender.com/api/posts",
+        );
         const data = await res.json();
         setPosts(data);
       } catch (err) {
