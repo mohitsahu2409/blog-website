@@ -37,4 +37,3 @@ export async function login(req, res) {
 
 
 
-// {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ik1vaGl0IiwiaWF0IjoxNzU0MjkzMTQzfQ.TZg-Rslrjuhnj9Yeigi_yEeBO4ADD74ZngTEhPwl4r8"}
