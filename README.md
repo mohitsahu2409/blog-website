@@ -63,7 +63,7 @@ blog-website/
 │   ├── routes/
 │   ├── middleware/
 │   ├── controllers/
-│   │   ├── db/
+│   ├── db/
 │   └── index.js
 └── README.md
 ```
