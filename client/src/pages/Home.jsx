@@ -42,7 +42,7 @@ function Home() {
             <div className="col-md-6 mb-4" key={post.id}>
               <div className="card h-100 shadow-sm">
                 <div className="card-body">
-                  <h5 className="card-title">{post.title}</h5>
+                  <h5 className="card-title">{post.title.slice(0, 80)}</h5>
                   <p className="card-text">{post.content.slice(0, 200)}...</p>
                 </div>
                 <div className="card-footer d-flex justify-content-between align-items-center">
